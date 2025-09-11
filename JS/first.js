@@ -14,9 +14,11 @@
 // }
 // login();
 
+
+//Synchronous
 function waitfortwosec()
 {
-    const ms=new Date().getTime()+5000;
+    const ms=new Date().getTime()+2000;
     while(new Date().getTime()<ms);
 }
 
@@ -41,5 +43,22 @@ getdata();
 console.log("Other Application")
 
 
+//Asynchronous
+//Callback hell
+
+function regist(Cb){
+    setTimeout(()=>{
+        console.log("Register end");
+        Cb();
+    },2000)
+}
+
+regist(()=>{
+    sendEmail(()=>{
+        login(()=>{
+            getdata()
+        })
+    })
+})
 
 
