@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box</title>
+    <style>
+        *{
+            margin:0px;
+            box-sizing: border-box;
+            padding: 0px;
+            
+        }
+        .container{
+            box-sizing: border-box;
+            flex-wrap:wrap;
+            flex-direction: row;
+            margin:10px;
+            padding:10px;
+            border: 2px dotted blueviolet;
+            background-color: aquamarine;
+            display: flex;
+            width:1500px;
+            height:705px;
+
+        }
+        .Header{
+            border:2px solid pink;
+            width:1500px;
+            height:90px;
+            padding:10px;
+            color:brown;
+            background-color: blanchedalmond;
+        }
+        .Menu{
+            width:1500px;
+            height:500px;
+            padding:5px;
+            color:brown;
+            display:flex;
+        }
+        .nav{
+            border:2px solid pink;
+            width:1500px;
+            height:60px;
+            padding:10px;
+            color:brown;
+            background-color: blanchedalmond;
+            display:flex;
+        }
+        .navbar{
+            color:black;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            display:flex;
+            padding:15px;
+    display: inline-block;
+}
+.navbar li{
+    display:inline-block;
+}
+.navbar li a{
+    text-decoration: none;
+    color:rgb(21, 50, 50);
+    padding : 10px  10px;
+    font-size:18px;
+
+}
+.navbar li a:hover{
+   text-decoration: underline;
+   color:white;
+}
+        .Left{
+            border:2px solid pink;
+            width:400px;
+            height:450px;
+            padding:10px;
+            color:brown;
+            background-color: blanchedalmond;
+            display:flex;
+        }
+        .Right{
+            border:2px solid pink;
+            width:1065px;
+            height:450px;
+            padding:10px;
+            color:brown;
+            background-color: blanchedalmond;
+            display:flex;
+        }
+        .Footer{
+            border:2px solid pink;
+            width:1500px;
+            height:90px;
+            padding:10px;
+            color:brown;
+            background-color: blanchedalmond;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="Header">ABESEC , GHAZIABAD</div>
+        <div class="nav">
+            <ul class="navbar">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Registration</a></li>
+            <li><a href="#">Contact Us</a></li>
+
+        </ul>
+        </div>
+        <div class="Menu">
+            <div class="Left">Left</div>
+            <div class="Right">Right</div>
+        </div>
+        <div class="Footer">&copy;2025 Design and developed by ABES</div>
+    </div>
+    
+</body>
+</html>
