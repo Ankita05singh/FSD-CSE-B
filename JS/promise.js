@@ -1,21 +1,3 @@
-function register() {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            console.log("Register end");
-            resolve();
-        }, 2000);
-    });
-}
-
-function sendEmail() {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            console.log("Email send end");
-            resolve();
-        }, 2000);
-    });
-}
-
 function login() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -42,13 +24,29 @@ function displayData() {
         }, 2000);
     });
 }
+function attemptTest() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("test attempted");
+            resolve();
+        }, 2000);
+    });
+}
+function logout() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("logout successfully");
+            resolve();
+        }, 2000);
+    });
+}
 
 // Promise chaining
-register()
-    .then(sendEmail)
-    .then(login)
+login()
     .then(getData)
     .then(displayData)
+    .then(attemptTest)
+    .then(logout)
     .catch((err) => {
         console.log("Error:", err);
     });
